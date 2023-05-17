@@ -7,9 +7,7 @@
 
     </data>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView"
-
+    <FrameLayout
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginStart="2dp"
@@ -18,28 +16,38 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
 
-        android:paddingTop="4dp"
-        android:paddingStart="6dp"
-        android:paddingEnd="6dp"
-        android:paddingBottom="5dp"
+        android:layout_gravity="center">
 
-        android:layout_gravity="center"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView"
 
-        style="@style/BaseText.PoppinsRegular"
-        android:textSize="15sp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
 
-        android:textColor="@color/white"
-        tools:text="1"
+            android:paddingTop="4dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="5dp"
 
-        android:background="@drawable/circle_primary"
+            android:layout_gravity="center"
 
-        android:gravity="center"
+            style="@style/BaseText.PoppinsRegular"
+            android:textSize="15sp"
 
-        android:maxLines="1"
-        android:ellipsize="end"
+            android:textColor="@color/white"
+            tools:text="1"
 
-        app:autoSizeTextType="uniform"
-        app:autoSizeMaxTextSize="15sp"
-        app:autoSizeMinTextSize="6sp"/>
+            android:background="@drawable/circle_primary"
+
+            android:gravity="center"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeMinTextSize="6sp"/>
+
+    </FrameLayout>
 
 </layout>

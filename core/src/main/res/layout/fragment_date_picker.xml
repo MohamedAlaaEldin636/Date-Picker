@@ -81,9 +81,9 @@
             tools:listitem="@layout/item_day"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
 
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="26dp"
+            android:paddingTop="5dp"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
             android:clipToPadding="false"
 
             app:layout_constraintTop_toBottomOf="@id/titleTextView"
@@ -104,9 +104,9 @@
             tools:listitem="@layout/item_num"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
 
-            android:layout_marginTop="14dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="26dp"
+            android:paddingTop="9dp"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
             android:clipToPadding="false"
 
             app:layout_constraintTop_toBottomOf="@id/recyclerViewDays"

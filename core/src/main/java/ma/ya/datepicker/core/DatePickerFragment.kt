@@ -110,7 +110,7 @@ class DatePickerFragment : Fragment() {
 			override fun checkLayoutParams(layoutParams: RecyclerView.LayoutParams?): Boolean {
 				if (layoutParams != null) {
 					layoutParams.width = width / 7
-					layoutParams.height = layoutParams.width
+					//layoutParams.height = layoutParams.width
 				}
 
 				return super.checkLayoutParams(layoutParams)
@@ -124,7 +124,7 @@ class DatePickerFragment : Fragment() {
 			override fun checkLayoutParams(layoutParams: RecyclerView.LayoutParams?): Boolean {
 				if (layoutParams != null) {
 					layoutParams.width = width / 7
-					layoutParams.height = layoutParams.width
+					//layoutParams.height = layoutParams.width
 				}
 
 				return super.checkLayoutParams(layoutParams)

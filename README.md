@@ -5,6 +5,7 @@
 # Features not completed
 
 - colors not yet customizable for same reason as above
+- full name of days or just Wed for example and camel case or not.
 
 # Limitation
 
