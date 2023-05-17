@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#1FC87A</color>
+    <color name="colorPrimaryVariant">#1FC87A</color>
+    <color name="colorSecondary">#F59133</color>
+    <color name="colorSecondaryVariant">#F59133</color>
+
+    <color name="small_title">#011D3D</color>
+
+    <color name="available_day">#97AABD</color>
+    <color name="disabled_day">#6397AABD</color>
+</resources>

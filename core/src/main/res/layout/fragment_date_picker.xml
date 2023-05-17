@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context="ma.ya.datepicker.core.DatePickerFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="ma.ya.datepicker.core.DatePickerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/titleTextView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            style="@style/BaseText.PNUBold"
+            android:textSize="36sp"
+            android:textColor="@color/small_title"
+
+            tools:text="يناير 2022"
+            android:text="@{viewModel.textCurrentYearMonth}"
+
+            android:textDirection="locale"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/calendar_arrow_start"
+
+            android:layout_marginEnd="51dp"
+
+            android:onClick="@{v -> viewModel.goToPrevMonth(v)}"
+
+            android:contentDescription="@string/go_to_previous_month"
+
+            app:layout_constraintEnd_toStartOf="@id/titleTextView"
+            app:layout_constraintTop_toTopOf="@id/titleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/titleTextView"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/calendar_arrow_end"
+
+            android:layout_marginStart="51dp"
+
+            android:onClick="@{v -> viewModel.goToNextMonth(v)}"
+
+            android:contentDescription="@string/go_to_next_month"
+
+            app:layout_constraintStart_toEndOf="@id/titleTextView"
+            app:layout_constraintTop_toTopOf="@id/titleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/titleTextView"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDays"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:scrollbars="none"
+            tools:itemCount="7"
+            tools:spanCount="7"
+            tools:orientation="vertical"
+            tools:listitem="@layout/item_day"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:clipToPadding="false"
+
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--35 items must be added isa.-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNums"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:scrollbars="none"
+            tools:itemCount="35"
+            tools:spanCount="7"
+            tools:orientation="vertical"
+            tools:listitem="@layout/item_num"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:clipToPadding="false"
+
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewDays"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

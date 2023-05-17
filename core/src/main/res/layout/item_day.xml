@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+
+        android:layout_width="35dp"
+        android:layout_height="23dp"
+
+        android:layout_gravity="center"
+
+        style="@style/BaseText.PNURegular"
+        android:textSize="11sp"
+
+        android:textColor="@color/available_day"
+        tools:text="الخميس"
+
+        android:gravity="center"
+
+        android:maxLines="1"
+        android:ellipsize="end"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="11sp"
+        app:autoSizeMinTextSize="6sp"/>
+
+</layout>
