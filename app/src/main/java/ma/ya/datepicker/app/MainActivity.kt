@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), DatePickerListener {
 						LocalDate.of(2023, Month.MAY, 21)
 					),
 					daysOfWeek = listOf(
-						DayOfWeek.THURSDAY
+						DayOfWeek.FRIDAY
 					)
 				),
 				showYearInText = true, // Default

@@ -7,14 +7,14 @@ plugins {
 }
 
 group = "com.github.MohamedAlaaEldin636"
-version = "1.0.1"
+version = "1.3.0"
 
 publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.github.MohamedAlaaEldin636"
             artifactId = "Date-Picker"
-            version = "1.0.1"
+            version = "1.3.0"
 
             afterEvaluate {
                 from(components["release"])

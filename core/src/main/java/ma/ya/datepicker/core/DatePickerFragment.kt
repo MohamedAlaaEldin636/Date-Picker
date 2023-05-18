@@ -21,6 +21,7 @@ import ma.ya.datepicker.core.extensions.toYearMonth
 import ma.ya.datepicker.core.listeners.DatePickerListener
 import ma.ya.datepicker.core.models.DatePickerInput
 import ma.ya.datepicker.core.models.orEmpty
+import java.time.LocalDate
 
 class DatePickerFragment : Fragment() {
 
@@ -150,6 +151,10 @@ class DatePickerFragment : Fragment() {
 		binding = null
 
 		super.onDestroyView()
+	}
+
+	fun getSelectedDayOrNull(): LocalDate? {
+		return viewModel.adapterNums.selectedDay
 	}
 
 }
