@@ -10,6 +10,7 @@ import androidx.lifecycle.map
 import ma.ya.datepicker.core.adapters.RVDays
 import ma.ya.datepicker.core.adapters.RVNums
 import ma.ya.datepicker.core.extensions.getCurrentLocaleOrNull
+import ma.ya.datepicker.core.extensions.toActualString
 import ma.ya.datepicker.core.extensions.toLocalDate
 import ma.ya.datepicker.core.extensions.toYearMonth
 import ma.ya.datepicker.core.models.DatePickerInput
@@ -28,11 +29,11 @@ class DatePickerViewModel(
 	val currentYearMonth: MutableLiveData<YearMonth> = MutableLiveData(YearMonth.now())
 
 	val textCurrentYearMonth = currentYearMonth.map {
-		getApplication<Application>().getCurrentLocaleOrNull()?.let { locale ->
-			val month = it.month.getDisplayName(TextStyle.FULL, locale)
+		getApplication<Application>()/*.getCurrentLocaleOrNull()?*/.let { context ->
+			val month = it.month.toActualString(context)//getDisplayName(TextStyle.FULL, locale)
 
 			if (input.showYearInText) "$month ${it.year}" else month
-		}.orEmpty()
+		}
 	}
 
 	val adapterDays = RVDays()

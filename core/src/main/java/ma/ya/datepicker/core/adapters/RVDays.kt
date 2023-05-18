@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ma.ya.datepicker.core.databinding.ItemDayBinding
 import ma.ya.datepicker.core.extensions.getCurrentLocaleOrNull
+import ma.ya.datepicker.core.extensions.toActualString
 import java.time.DayOfWeek
 import java.time.format.TextStyle
 
@@ -64,9 +65,10 @@ class VHDays(
 ) : RecyclerView.ViewHolder(binding.root) {
 
 	fun bind(day: DayOfWeek) {
-		val currentLocale = binding.root.context?.getCurrentLocaleOrNull()
+		//val currentLocale = binding.root.context?.getCurrentLocaleOrNull()
+		val context = binding.root.context ?: return
 
-		val name = day.getDisplayName(TextStyle.FULL, currentLocale ?: return).orEmpty()
+		val name = day.toActualString(context)//.getDisplayName(TextStyle.FULL, currentLocale ?: return).orEmpty()
 		binding.textView.text = name
 	}
 
